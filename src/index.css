@@ -1,13 +1,130 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+  position: relative;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 30px 20px;
+ width: 100%;
+ /* background-color: red; */
+ 
+}
+.nav-section ul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-section ul li{
+  list-style: none;
+}
+.nav-section ul li a{
+  padding: 0 20px;
+  text-decoration: none;
+  color: #111;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav-section ul li a:hover{
+   color: aqua;
+   transition: 0.5s;
+   transform-origin: center;
+   transform: rotate(90deg);
+}
+.navbar::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('img/bg.webp');
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-clip: content-box; */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
+}
+.home_section{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url('img/bg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+
+.home_first{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.home_first h2{
+  font-size: 45px;
+  font-weight: bolder;
+  word-spacing: 1px;
+  margin: 10px 0;
+}
+.home_section p{
+  font-weight:lighter;
+  font-size: 17px;
+}
+
+.cras{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sond{
+ width: 500px;
+position: absolute;
+top: 100px;
+}
+
+.sang{
+  /* padding: 0 20px; */
+  position: absolute;
+  right: -20px;
+  top: 100px;
+ 
+  display: block;
+  width: 80vw;
+  margin: auto;
+}
+.head_img{
+  /* position: absolute; */
+ /* left: -20px; */
+}
+
+.nav-link{
+display: none;
+}
+.btn-link{
+ display: block;
+}
+
+@media only screen and (max-width:647px) {
+   .nav-link{
+    display: block;
+   }
+   .btn-link{
+     display: none;
+   }
 }
